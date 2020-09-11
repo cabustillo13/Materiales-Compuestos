@@ -49,6 +49,7 @@ plt.show()
 
 #Grafico 2
 plt.plot(Vf,v12)
+plt.legend(["v12"])
 plt.plot(0.6,v12[6], marker="o", color="blue")
 plt.xlabel("Vf")
 plt.title("Carlos Bustillo - Agustin Lezcano")
