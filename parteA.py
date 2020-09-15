@@ -51,3 +51,9 @@ plt.xlabel("Vf")
 plt.title("Carlos Bustillo - Agustin Lezcano")
 plt.grid()
 plt.show()
+
+#Obtencion de valores
+print("E1",format(E1[6],'.3e'))
+print("E2",format(E2[6],'.3e'))
+print("v12",v12[6])
+print("G12",format(G12[6],'.3e'))

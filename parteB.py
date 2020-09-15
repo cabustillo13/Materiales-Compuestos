@@ -1,5 +1,3 @@
-#python 3.8 src 
-
 import matplotlib.pyplot as plt
 import numpy as np
 if __name__ == "__main__":
@@ -22,7 +20,7 @@ if __name__ == "__main__":
 
     # Inciso a)
     epsylon3 = (-v13/E1)* sigma[0] + (-v23/E2)*sigma[1]
-    print("Cálculo de epsylon3: ", epsylon3)
+    print("Calculo de epsylon3: ", epsylon3)
 
     #Inciso b)
     #Matriz de flexibilidad reducida
@@ -47,7 +45,8 @@ if __name__ == "__main__":
 
     INV=np.linalg.inv(S)
 
-    print("Matrices S: ", S, "\ny Q:\n", Q)
+    print("Matrices S: ", S)
+    print("Matrices Q: ", Q)
 
     # Inciso c)Comparacion entre S y Q
     if (np.all(Q)==np.all(INV)):
@@ -62,10 +61,7 @@ if __name__ == "__main__":
     S16n=[]
     S26n=[]
     S66n=[]
-
-
-
-
+    
     for i in dominio:
         S11n.append( S11 * np.power(np.cos(i),4) + (2*S12+S66) * np.power((np.cos(i)*np.sin(i)),2) + S22 * np.power(np.sin(i),4))
         S12n.append( S12 * (np.power(np.sin(i),4) + np.power(np.cos(i),4))+(S11+S22-S66)*np.power((np.sin(i)*np.cos(i)),2))
@@ -74,7 +70,7 @@ if __name__ == "__main__":
         S26n.append((2*S11-2*S12-S66)* np.cos(i)*np.power(np.sin(i),3) - (2*S22-2*S12-S66)* np.sin(i)*np.power(np.cos(i),3))
         S66n.append(2* (2*S11+2*S22-4*S12-S66)* np.power((np.sin(i)*np.cos(i)),2)+S66*(np.power(np.sin(i),4)+np.power(np.cos(i),4)))  
 
-    #Gráficos
+    #Graficos
     plt.figure()
     plt.subplot(2,3,1)
     plt.plot(dominio,S11n)
@@ -89,4 +85,3 @@ if __name__ == "__main__":
     plt.subplot(2,3,6)
     plt.plot(dominio,S66n)
     plt.show()
-
