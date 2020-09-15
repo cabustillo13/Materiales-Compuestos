@@ -61,7 +61,11 @@ if __name__ == "__main__":
     S16n=[]
     S26n=[]
     S66n=[]
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> d704b70b0455d07b82bb1e0ead11417fef225928
     for i in dominio:
         S11n.append( S11 * np.power(np.cos(i),4) + (2*S12+S66) * np.power((np.cos(i)*np.sin(i)),2) + S22 * np.power(np.sin(i),4))
         S12n.append( S12 * (np.power(np.sin(i),4) + np.power(np.cos(i),4))+(S11+S22-S66)*np.power((np.sin(i)*np.cos(i)),2))
@@ -74,14 +78,26 @@ if __name__ == "__main__":
     plt.figure()
     plt.subplot(2,3,1)
     plt.plot(dominio,S11n)
+    plt.xlabel("Ángulo [rad]")
+    plt.ylabel("S11")
     plt.subplot(2,3,2)
     plt.plot(dominio,S12n)
+    plt.xlabel("Ángulo [rad]")
+    plt.ylabel("S11")
     plt.subplot(2,3,3)
     plt.plot(dominio,S22n)
+    plt.xlabel("Ángulo [rad]")
+    plt.ylabel("S11")
     plt.subplot(2,3,4)
     plt.plot(dominio,S16n)
+    plt.xlabel("Ángulo [rad]")
+    plt.ylabel("S11")
     plt.subplot(2,3,5)
     plt.plot(dominio,S26n)
+    plt.xlabel("Ángulo [rad]")
+    plt.ylabel("S11")
     plt.subplot(2,3,6)
     plt.plot(dominio,S66n)
+    plt.xlabel("Ángulo [rad]")
+    plt.ylabel("S11")
     plt.show()
